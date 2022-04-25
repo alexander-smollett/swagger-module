@@ -1,1 +1,4 @@
-swagger\SwaggerConfig.class
+org\brutforcer\utils\Caches$1.class
+org\brutforcer\utils\Caches.class
+org\brutforcer\utils\exceptions\EntityAlreadyExist.class
+org\brutforcer\utils\exceptions\NonExistEntity.class
