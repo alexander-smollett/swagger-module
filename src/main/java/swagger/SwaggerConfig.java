@@ -31,12 +31,17 @@ public class SwaggerConfig {
                       @Value("${application.swagger.description}") String swaggerDescription,
                       @Value("${application.swagger.version}") String swaggerVersion,
                      @Value("${application.swagger.contactName}") String contactName,
-                     @Value("${application.swagger.contactUrl}") String contactUrl) {
+                     @Value("${application.swagger.contactMail:noemail}") String contactMail,
+                     @Value("${application.swagger.contactUrl:nourl://url}") String contactUrl) {
         return new Info()
                 .title(swaggerTitle)
                 .description(swaggerDescription)
                 .version(swaggerVersion)
-                .contact(new Contact().name(contactName).url(contactUrl));
+                .contact(new Contact()
+                        .name(contactName)
+                        .url(contactUrl)
+                        .email(contactMail)
+                );
     }
 
     @Bean
